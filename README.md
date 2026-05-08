@@ -1,1 +1,10 @@
 # real-estate-live-data-pipeline
+
+My project consists of having AI set up a Python script that scraped data from Aruodas, the main website for real estate listings in Lithuania, and I then connected this data to BigQuery to house the data. The scraper runs locally, so needs to be run manually, but the idea would be (in an ideal world) to have the scraper run in the cloud and run hourly. BigQuery was then connected to dbt to clean and transform the data into __ views. In my case, the data underwent (include the stages and explain why). The marts were then connected to Looker via BigQuery, taking advantage of the Google ecosystem, and a dashboard was created in Looker to analyze the data. (add relevant details)
+
+The data looks at several women artists, the number of shows and tours that they have done, and the actual, adjusted, and average gross revenue for those shows and tours over time. The data was scraped from Wikipedia and therefore includes some inconsistencies, such as footnotes, dollar signs and commas in the monetary data, and various symbols in tour titles. I included a data sample below for reference on what the uncleaned data looked like before the ELT process.
+
+## Data Sample
+| source | source_id | url | title | city | district | address | property_type | price_eur | price_per_m2_eur | area_m2 | rooms | floor | year_built | status | raw_text | scraped_at | first_seen_at | last_seen_at |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| aruodas_vilnius_apartments | butai-vilniuje-zveryne-paribio-g-moderniai-ir-kokybiskai-irengtas-labai-erdvus-1-3650377 | https://m.aruodas.lt/butai-vilniuje-zveryne-paribio-g-moderniai-ir-kokybiskai-irengtas-labai-erdvus-1-3650377/ | Paribio g. | Vilnius | Žvėrynas | Paribio g. | apartment | 305000 | 4378 | 69.7 | 4.0 | 3/5 aukšt. | 1971 | active | Vilnius, Žvėrynas Paribio g. 305 000 € 4378 €/m² Sumažėjusi 1,6% 4 kamb. 69,7 m² 3/5 aukšt. 1971 m. Centrinis Įrengtas Pasidomėkite būsto paskola | 2026-05-08T08:30:52+00:00 | 2026-05-06T18:22:17+00:00 | 2026-05-08T08:42:28+00:00 |

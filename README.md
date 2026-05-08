@@ -32,8 +32,7 @@ The next two charts I made look at the average price per m2 (in eur) across dist
 
 
 <img width="747" height="555" alt="real estate 3" src="https://github.com/user-attachments/assets/3e4600be-bc86-4fff-93ac-a8fce05c2f8b" />
-
-
+<br>
 <img width="707" height="545" alt="real estate 4" src="https://github.com/user-attachments/assets/5a248832-4e32-4069-8414-5fe3041da9e9" />
 
 

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: real_estate_listings
+    project: real-estate-dbt
+    dataset: real_estate_listings
+    tables:
+      - name: latest_listings

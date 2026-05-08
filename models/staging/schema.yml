@@ -1,0 +1,26 @@
+version: 2
+models:
+  - name: stg_latest_listings
+    columns:
+      - name: url
+        tests:
+          - unique
+          - not_null
+      - name: price_eur
+        tests:
+          - not_null
+      - name: price_per_m2_eur
+        tests:
+          - not_null
+      - name: district
+        tests:
+          - not_null
+      - name: area_m2
+        tests:
+          - not_null
+      - name: property_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['apartment', 'house']
